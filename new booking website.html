@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<title>Booking Managment</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="icon" href="https://toppng.com/uploads/preview/eon-letter-m-11563041490waz5pfhaxu.png" >
+<style>
+  
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(255, 251, 13);
+}
+
+.topnav a {
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+
+.topnav a.active {
+  background-color: hsl(0, 0%, 0%);
+  color: rgb(250, 244, 244);
+}
+.topnav a.active:hover {
+  background-color: hsl(36, 97%, 56%);
+  color: rgb(0, 0, 0);
+}
+
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topnav-right-Contactus  {
+  float: right;
+}
+.topnav-right-About {
+  float:right ;
+  
+}
+
+/* Responsive navigation menu (for mobile devices) */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav-right {
+    float: none;
+    display: block;
+  }
+  
+  .topnav-centered a {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+}
+
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+{
+  box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 20%;
+  background-color: yellow;
+  position: relative;
+  height: auto;
+  top: 10px;
+}
+
+.right {
+  width: 80%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.columnn {
+  float: left;
+  width: 33.33%;
+  border: 3px solid yellow;
+  border-radius: 30px 30px 30px 30px;
+}
+
+.zoom {
+  padding: 10px;
+ 
+  transition: transform .2s; /* Animation */
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+h1{
+    color:  yellow;
+  text-shadow: 1px 1px 2px rgb(241, 236, 136), 0 0 25px rgb(242, 242, 242), 0 0 5px rgb(230, 230, 232)
+}
+</style>
+<body style="background-color:black ;">
+  
+<div class="topnav">
+
+  
+  <div class="topnav-centered">
+    <a href="http://127.0.0.1:5500/new%20booking%20website.html" class="active">Home</a>
+  </div>
+  
+  
+  <img src="http://127.0.0.1:8887/logo%20n4.png" >
+  
+  <div class="topnav-right-Contactus" >
+    <a href="http://127.0.0.1:5500/Contact%20us.html">Contact Us</a>
+    
+    
+    <a href="#about">About</a>
+    
+  </div>
+  
+</div>
+
+<div style="padding: left 10px;">
+  
+</div>
+
+<div class="w3-container">
+  
+</div>
+
+<div class="w3-content w3-display-container" style="max-width:800px">
+  <img class="mySlides" src="https://i0.wp.com/www.irishfilmcritic.com/wp-content/uploads/2021/05/A-Quiet-Place-Part-II.jpg?fit=1392%2C696&ssl=1" style="width:100%">
+  <img class="mySlides" src="https://wallpapercave.com/wp/wp11345895.jpg" style="width:100%">
+  <img class="mySlides" src="https://i0.wp.com/www.irishfilmcritic.com/wp-content/uploads/2022/11/John-Wick-Chapter-4.jpg?fit=1392%2C696&ssl=1" style="width:100%">
+  <img class="mySlides" src="https://i0.wp.com/www.irishfilmcritic.com/wp-content/uploads/2022/10/Black-Panther-Wakanda-Forever.jpg?fit=1392%2C696&ssl=1" style="width:100%">
+  <img class="mySlides" src="https://i0.wp.com/www.irishfilmcritic.com/wp-content/uploads/2022/04/TSOD.jpg?fit=1392%2C696&ssl=1" style="width:100%">
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(5)"></span>
+  </div>
+</div>
+<h1 style="color: yellow;"><b><center>NOW SHOWING: </center></b></h2>
+<div class="row">
+  <div class="column left" style="background-color:yellow;"><br>
+    <h2><B><u><CENTER>BOOK NOW!</CENTER></u></B></h2><br>
+    <center><input type="search" placeholder="Search your movie :)" style="width: ;auto"></center>
+    <h4>   </h4>
+    <center><input type="date" style="width: auto;"></center>
+    <h4>  </h4>
+    <center><input type="time" style="width: ;auto"></center>
+    <center><p><input type="checkbox">&nbsp; I have read the <b>*T&C</b></p></center>
+    <center><input type="button" value="Pay Now" style="color:red ;"</center>
+      <h6 style="color: grey; font-size: small;">**In order to purchase a ticket and use our service, you must agree to the following terms and conditions:<br>
+        <li>
+        You must be at least 18 years of age to purchase a ticket and use our service.<br>
+        <li>
+        You must provide us with your full name, date of birth, contact details and any other information we reasonably require in order to process your booking.<br>
+        <li>
+        You are responsible for ensuring that the information you provide us is accurate and complete.<br>
+        <li>
+        You must pay for your ticket in full at the time of booking. We accept payment by credit or debit card.<br>
+        <li>
+        You must not purchase a ticket for a journey which you know or suspect you will be unable to make.<br>
+        <li>
+        You must not resell or transfer your ticket to any other person.<br>
+        <li>
+        You must comply with all applicable laws, regulations and standards in relation to your booking and journey.<br>
+        <li>
+        You acknowledge that your booking is subject to the conditions of carriage of the relevant transport provider.<br>
+        <li>
+        You acknowledge that we are not the transport provider and we have no control over the operation of the transport service.<br>
+        <li>
+        We reserve the right to change these terms and conditions at any time.<br><br>
+         *****<br></h6>
+  </div>
+  <div class="column right" style="background-color:rgb(0, 0, 0);
+  color: rgb(255, 255, 30);">
+    
+    <div class="row">
+      <div class="columnn"><br>
+        <center><div class="zoom">
+          
+          <a href="http://127.0.0.1:5500/\movie reviews\wakanda.html">
+            <center><img src="https://images.thedirect.com/media/photos/FeJ0BJtWIAUecOG.jpg" style="height: 200px;border: 2px solid yellow;"></center> 
+          </a>
+        </div></center>
+          <center><h4><u> Wakanda Forever</u></h4></center>
+        <center><h6 style="color:orange ;">2022 ‧ Action/Adventure ‧ 2h 41m </h6></center>
+        <center><p><b>Shows at:</b><br>
+          <li>
+          1:30  pm<br>
+          <li>
+          5:00  pm<br>
+          <li>
+          8:00  pm<br>
+          <li>
+          11:00 pm<br>
+          <li>
+          2:00  am<br>
+
+        </p></center>
+      </div>
+      <div class="columnn"><br>
+        <center><div class="zoom">
+          
+          <a href="http://127.0.0.1:5500/movie%20reviews/Black%20Adam.html">
+            <center><img src="https://images.thedirect.com/media/photos/FcEv-62aQAADsg0-2.jpg" style="height: 200px;border: 2px solid yellow;"></center>
+          </a>
+        </div></center>
+          <center><h4><u> Black Adam</u></h4></center>
+        <center><h6 style="color:orange ;">2022 ‧ Action/Adventure ‧ 2h 5m</h6></center>
+        <center><p><b>Shows at:</b><br>
+          <li>
+          12:30  pm<br>
+          <li>
+          4:00  pm<br>
+          <li>
+          7:00  pm<br>
+          <li>
+          10:00 pm<br>
+          <li>
+          1:00  am<br>
+
+        </p></center>
+      </div>
+      <div class="columnn"><br>
+        <center><div class="zoom">
+          <a href="http://127.0.0.1:5500/movie%20reviews/Free%20Guy.html">
+            <center><img src="https://i.redd.it/cxihlqsc6fg71.jpg" style="height: 200px;border: 2px solid yellow;;"></center>
+          </a>
+        </div></center>
+          <center><h4><u> Free Guy</u></h4></center>
+        <center><h6 style="color:orange ;">2021 ‧ Action/Sci-fi ‧ 1h 55m
+        </h6></center>
+        <center><p><b>Shows at:</b><br>
+          <li>
+            11:30  pm<br>
+            <li>
+            3:00  pm<br>
+            <li>
+            6:00  pm<br>
+            <li>
+            9:00 pm<br>
+            <li>
+            12:00  am<br>
+          </li>
+
+        </p></center>
+      </div>
+      <div class="columnn"><br>
+        <center><div class="zoom">
+          
+          <a href="http://127.0.0.1:5500/movie%20reviews/Spiderman.html">
+            <center><img src="https://w0.peakpx.com/wallpaper/392/737/HD-wallpaper-spider-man-no-way-home-poster.jpg" style="height: 200px;border: 2px solid yellow;;"></center>
+          </a>
+          
+        </div></center>
+          <center><h4><u> SpiderMan: No Way Home</u></h4></center>
+        <center><h6 style="color:orange ;">2019 ‧ Action/Adventure ‧ 2h 10m</h6></center>
+        <center><p><b>Shows at:</b><br>
+          <li>
+          12:30  pm<br>
+          <li>
+          3:00  pm<br>
+          <li>
+          5:00  pm<br>
+          <li>
+          8:00 pm<br>
+          <li>
+          11:00  am<br>
+
+        </p></center>
+      </div>
+      <div class="columnn"><br>
+        <center><div class="zoom">
+          
+          <a href="http://127.0.0.1:5500/movie%20reviews/No%20Time%20To%20Die.html">
+            <center><img src="https://w0.peakpx.com/wallpaper/411/735/HD-wallpaper-rami-malek-no-time-to-die-movie-poster.jpg" style="height: 200px;border: 2px solid yellow;;"></center>
+          </a>
+        </div></center>
+          <center><h4><u> No Time To Die</u></h4></center>
+        <center><h6 style="color:orange ;">2021 ‧ Action/Thriller ‧ 2h 43m </h6></center>
+        <center><p><b>Shows at:</b><br>
+          <li>
+          3:30  pm<br>
+          <li>
+          6:00  pm<br>
+          <li>
+          10:00  pm<br>
+          <li>
+          12:00 am<br>
+          <li>
+          3:00  am<br>
+
+        </p></center>
+      </div>
+      <div class="columnn"><br>
+        <center><div class="zoom">
+          
+          <a href="http://127.0.0.1:5500/movie%20reviews/Dr.Strange.html">
+            <center><img src="https://pbs.twimg.com/media/FLhhanQaMAIGHlP?format=jpg&name=medium" style="height: 200px;border: 2px solid yellow;;"></center>
+          </a>
+        </div></center>
+          <center><h4><u> Dr.Strange: Multiverse Of Madness</u></h4></center>
+          <center><h6 style="color:orange ;">2022 ‧ Action/Adventure ‧ 2h 6m
+          </h6></center>
+          <center><p><b>Shows at:</b><br>
+          <li>
+          1:45  pm<br>
+          <li>
+          6:00  pm<br>
+          <li>
+          9:30  pm<br>
+          <li>
+          1:00 am<br>
+          <li>
+          3:00  am<br>
+
+        </p></center>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<footer>
+  <div class="container" style="background-color: yellow;width: 100%;">
+    <div class="columnn"style="background-color: yellow; border-radius: 0 0 0 0 ">
+      <img src="http://127.0.0.1:8887/logo%20n4.png">
+      <p class="footer-text" style="font-size: 20px;">
+        <b><i>"Experience the thrill of the silver screen from the comfort of your own home!"</b></i>
+      </p>
+    </div>
+    <div class="columnn" style="background-color: yellow; border-radius: 0px 0px 0px 0px;">
+
+      <div class="wrapper">
+          <b>
+        <p class="footer-title">Quick Links</p>
+
+        <ul>
+
+          <li>
+            <a href="#" class="footer-link">Watch with us</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">About Us</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Contact Us</a>
+          </li>
+
+        </ul></b>
+      </div>
+    </div>
+    <div class="columnn"style="background-color: yellow;border-radius:0 0 0 0">
+      <b><p class="footer-title">Legal Stuff</p>
+        
+        <ul>
+
+          <li>
+            <a href="#" class="footer-link">Privacy Notice</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Cookie Policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-link">Terms Of Use</a>
+          </li>
+
+        </ul></b>
+
+      </div>
+    </div>
+    <center><p class="copyright" style="color: yellow;">
+      &copy; Copyright 2022 <a href="http://127.0.0.1:5500/new%20booking%20website.html#">Movieszz</a>
+    </p></center>
+  </div>
+</footer>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+
+
+</body>
+</html> 
