@@ -103,7 +103,19 @@ section::after {
   display: table;
   clear: both;
 }
+.columnnn {
+  float: left;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
 
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+}
 
 </style>
 <body style="background-color: black;">
@@ -147,10 +159,15 @@ section::after {
         </p>
         <h2 style="color: yellow ;">Director:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Writer:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Release Date:</h2>
         <h3 style="color: yellow ;">Cary Foji&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Robert Wade&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;September 30, 2021</h3>
+        <div class="columnnn left">
         <h2 style="color: yellow ;">Cast: </h2>
         <p style="color: yellow;">
            <b>Daniel Craig<br>Rami Malek<br> Lashana Lynch<br> Naomie Harris<br> Ana de Armas<br> Ben Whishaw<br>Ralph Fiennes<br></b></p>
             <h1>&nbsp;</h1>
+        </div>
+        <div class="columnnn right">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/vw2FOYjCz38" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
     </article><br><br>
   </section>
   <h1>&nbsp;</h1>
