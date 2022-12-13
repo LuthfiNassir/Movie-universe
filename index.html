@@ -9,6 +9,9 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .topnav {
@@ -71,9 +74,74 @@ body {
   }
 }
 
-.mySlides {display:none}
-.w3-left, .w3-right, .w3-badge {cursor:pointer}
-.w3-badge {height:13px;width:13px;padding:0}
+*{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            position: absolute;
+            top: 230px;
+            left: 50%;
+            height: 349.67px;
+            width: 699.33px;
+            background: red;
+            transform: translate(-50%,-50%);
+            overflow: hidden;
+            
+        }
+        .navigator{
+            display: flex;
+            visibility: inherit;
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            transform: translate(-50%);
+        }
+        .navigator .bar{
+            height: 13px;
+            width:13px;
+            background: cornsilk;
+            cursor: pointer;
+            border: 2px solid white;
+            border-radius: 50px 50px 50px 50px;
+            margin-left: 8px;
+        }
+        .navigator .bar:hover{
+            background: yellow;
+        }
+        input[type="radio"]{
+            position: absolute;
+            visibility: hidden;
+        }
+        .slides{
+            display: flex;
+            height:100%;
+            width: 500%;
+        }
+        .image{
+            width: 20%;
+            transition: 0.4s ease;
+        }
+        img{
+            width: 100%;
+            height:100%;
+        }
+        #btn1:checked ~ .first{
+            margin-left: 0;
+        }
+        #btn2:checked ~ .first{
+            margin-left: -20%;
+        }
+        #btn3:checked ~ .first{
+            margin-left: -40%;
+        }
+        #btn4:checked ~ .first{
+            margin-left: -60%;
+        }
+        #btn5:checked ~ .first{
+            margin-left: -80%;
+        }
+   
 {
   box-sizing: border-box;
 }
@@ -84,6 +152,7 @@ body {
   padding: 10px;
   height: 300px; /* Should be removed. Only for demonstration */
   border-radius: 0 30px 30px 0 ;
+  top: 1000px;
 }
 
 .left {
@@ -91,11 +160,13 @@ body {
   background-color: yellow;
   position: relative;
   height: auto;
-  top: 10px;
+ top: 360px;
 }
 
 .right {
   width: 80%;
+  position: relative;
+  top: 360px;
 }
 
 /* Clear floats after the columns */
@@ -110,6 +181,16 @@ body {
   border: 3px solid yellow;
   border-radius: 15px 15px 15px 15px;
   box-shadow: 5px 3px 3px yellow;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.columnnn {
+  float: left;
+  width: 33.33%;
+ 
 }
 
 .zoom {
@@ -126,247 +207,273 @@ body {
 }
 h1{
     color:  yellow;
-  text-shadow: 1px 1px 2px rgb(241, 236, 136), 0 0 25px rgb(242, 242, 242), 0 0 5px rgb(230, 230, 232)
+  text-shadow: 1px 1px 2px rgb(241, 236, 136), 0 0 25px rgb(242, 242, 242), 0 0 5px rgb(230, 230, 232);
+  position: relative;
+  top: 365px;
+  
 }
+footer {
+  text-align: left;
+  padding: 3px;
+  background-color: yellow;
+  color: rgb(0, 0, 0);
+  margin-top: 360px;
+  height: 100px;
+  position:absolute;
+}
+
 </style>
 <body style="background-color:black ;">
   
-<div class="topnav">
+    <div class="topnav">
 
-  
-  <div class="topnav-centered">
-    <a href="index.html" class="active">Home</a>
-  </div>
-  
-  
-  <img src="logo n4.png" >
-  
-  <div class="topnav-right-Contactus" >
-    <a href="Contact us.html">Contact Us</a>
+    
+    <div class="topnav-centered">
+        <a href="index.html" class="active">Home</a>
+    </div>
     
     
-    <a href="#about">About</a>
+    <img src="logo n4.png" style="height: 40px;width: 167px;">
     
-  </div>
-  
-</div>
-
-<div style="padding: left 10px;">
-  
-</div>
-
-<div class="w3-container">
-  
-</div>
-
-<div class="w3-content w3-display-container" style="max-width:800px">
-  <img class="mySlides" src="https://i0.wp.com/www.irishfilmcritic.com/wp-content/uploads/2021/05/A-Quiet-Place-Part-II.jpg?fit=1392%2C696&ssl=1" style="width:100%">
-  <img class="mySlides" src="https://wallpapercave.com/wp/wp11345895.jpg" style="width:100%">
-  <img class="mySlides" src="https://i0.wp.com/www.irishfilmcritic.com/wp-content/uploads/2022/11/John-Wick-Chapter-4.jpg?fit=1392%2C696&ssl=1" style="width:100%">
-  <img class="mySlides" src="https://i0.wp.com/www.irishfilmcritic.com/wp-content/uploads/2022/10/Black-Panther-Wakanda-Forever.jpg?fit=1392%2C696&ssl=1" style="width:100%">
-  <img class="mySlides" src="https://i0.wp.com/www.irishfilmcritic.com/wp-content/uploads/2022/04/TSOD.jpg?fit=1392%2C696&ssl=1" style="width:100%">
-  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
-    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
-    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
-    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
-    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
-    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
-    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(4)"></span>
-    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(5)"></span>
-  </div>
-</div>
-<h1 style="color: yellow;"><b><center>NOW SHOWING: </center></b></h2>
-<div class="row">
-  <div class="column left" style="background-color:yellow;"><br>
-    <h2><B><u><CENTER>BOOK NOW!</CENTER></u></B></h2><br>
-    <center><input type="search" placeholder="Search your movie :)" style="width: ;auto"></center>
-    <h4>   </h4>
-    <center><input type="date" style="width: auto;"></center>
-    <h4>  </h4>
-    <center><input type="time" style="width: ;auto"></center>
-    <center><p><input type="checkbox">&nbsp; I have read the <b>*T&C</b></p></center>
-    <center><input type="button" value="Pay Now" style="color:red ;"</center>
-      <h6 style="color: grey; font-size: small;">**In order to purchase a ticket and use our service, you must agree to the following terms and conditions:<br>
-        <li>
-        You must be at least 18 years of age to purchase a ticket and use our service.<br>
-        <li>
-        You must provide us with your full name, date of birth, contact details and any other information we reasonably require in order to process your booking.<br>
-        <li>
-        You are responsible for ensuring that the information you provide us is accurate and complete.<br>
-        <li>
-        You must pay for your ticket in full at the time of booking. We accept payment by credit or debit card.<br>
-        <li>
-        You must not purchase a ticket for a journey which you know or suspect you will be unable to make.<br>
-        <li>
-        You must not resell or transfer your ticket to any other person.<br>
-        <li>
-        You must comply with all applicable laws, regulations and standards in relation to your booking and journey.<br>
-        <li>
-        You acknowledge that your booking is subject to the conditions of carriage of the relevant transport provider.<br>
-        <li>
-        You acknowledge that we are not the transport provider and we have no control over the operation of the transport service.<br>
-        <li>
-        We reserve the right to change these terms and conditions at any time.<br><br>
-         *****<br></h6>
-  </div>
-  <div class="column right" style="background-color:rgb(0, 0, 0);
-  color: rgb(255, 255, 30);">
+    <div class="topnav-right-Contactus" >
+        <a href="Contact us.html">Contact Us</a>
+        
+        
+        <a href="#about">About</a>
+        
+    </div>
     
+    </div>
+
+    <div class="container">
+        <div class="slides">
+            <input type="radio" name="common" id="btn1" checked>
+            <input type="radio" name="common" id="btn2">
+            <input type="radio" name="common" id="btn3">
+            <input type="radio" name="common" id="btn4">
+            <input type="radio" name="common" id="btn5">
+            <div class="image first">
+                <img src="https://i0.wp.com/www.irishfilmcritic.com/wp-content/uploads/2021/05/A-Quiet-Place-Part-II.jpg?fit=1392%2C696&ssl=1">
+            </div>
+            <div class="image">
+                <img src="https://wallpapercave.com/wp/wp11345895.jpg">
+            </div>
+            <div class="image">
+                <img src="https://i0.wp.com/www.irishfilmcritic.com/wp-content/uploads/2022/11/John-Wick-Chapter-4.jpg?fit=1392%2C696&ssl=1">
+            </div>
+            <div class="image">
+                <img src="https://i0.wp.com/www.irishfilmcritic.com/wp-content/uploads/2022/10/Black-Panther-Wakanda-Forever.jpg?fit=1392%2C696&ssl=1">
+            </div>
+            <div class="image">
+                <img src="https://i0.wp.com/www.irishfilmcritic.com/wp-content/uploads/2022/04/TSOD.jpg?fit=1392%2C696&ssl=1">
+            </div>
+        </div>
+        <div class="navigator">
+            <label for="btn1" class="bar"></label>
+            <label for="btn2"class="bar"></label></label>
+            <label for="btn3"class="bar"></label></label>
+            <label for="btn4"class="bar"></label></label>
+            <label for="btn5"class="bar"></label></label>
+        </div>
+
+    </div>
+<div>    
+    <h1 style="color: yellow;"><b><center>NOW SHOWING: </center></b></h2>
     <div class="row">
-      <div class="columnn"><br>
-        <center><div class="zoom">
-          
-          <a href="wakanda.html">
-            <center><img src="https://images.thedirect.com/media/photos/FeJ0BJtWIAUecOG.jpg" style="height: 200px;border: 2px solid yellow;"></center> 
-          </a>
-        </div></center>
-          <center><h4><u> Wakanda Forever</u></h4></center>
-        <center><h6 style="color:orange ;">2022 ‧ Action/Adventure ‧ 2h 41m </h6></center>
-        <center><p><b>Shows at:</b><br>
-          <li>
-          1:30  pm<br>
-          <li>
-          5:00  pm<br>
-          <li>
-          8:00  pm<br>
-          <li>
-          11:00 pm<br>
-          <li>
-          2:00  am<br>
+    <div class="column left" style="background-color:yellow;"><br>
+        <h2><B><u><CENTER>BOOK NOW!</CENTER></u></B></h2><br>
+        <center><input type="search" placeholder="Search your movie :)" style="width:auto"></center>
+        <h4>   </h4>
+        <center><input type="date" style="width: auto;"></center>
+        <h4>  </h4>
+        <center><input type="time" style="width: auto;"></center>
+        <center><p><input type="checkbox">&nbsp; I have read the <b>*T&C</b></p></center>
+        <center><input type="button" value="Pay Now" style="color:red ;"</center>
+        <h6 style="color: grey; font-size: small;">**In order to purchase a ticket and use our service, you must agree to the following terms and conditions:<br>
+            <li>
+            You must be at least 18 years of age to purchase a ticket and use our service.<br>
+            <li>
+            You must provide us with your full name, date of birth, contact details and any other information we reasonably require in order to process your booking.<br>
+            <li>
+            You are responsible for ensuring that the information you provide us is accurate and complete.<br>
+            <li>
+            You must pay for your ticket in full at the time of booking. We accept payment by credit or debit card.<br>
+            <li>
+            You must not purchase a ticket for a journey which you know or suspect you will be unable to make.<br>
+            <li>
+            You must not resell or transfer your ticket to any other person.<br>
+            <li>
+            You must comply with all applicable laws, regulations and standards in relation to your booking and journey.<br>
+            <li>
+            You acknowledge that your booking is subject to the conditions of carriage of the relevant transport provider.<br>
+            <li>
+            You acknowledge that we are not the transport provider and we have no control over the operation of the transport service.<br>
+            <li>
+            We reserve the right to change these terms and conditions at any time.<br><br>
+            *****<br></h6>
+    </div>
+    <div class="column right" style="background-color:rgb(0, 0, 0);
+    color: rgb(255, 255, 30);">
+        
+        <div class="row">
+        <div class="columnn"><br>
+            <center><div class="zoom">
+            
+            <a href="wakanda.html">
+                <center><img src="https://images.thedirect.com/media/photos/FeJ0BJtWIAUecOG.jpg" style="height: 200px;width: 160.79px; border: 2px solid yellow;"></center> 
+            </a>
+            </div></center><br>
+            <center><h4><u> Wakanda Forever</u></h4></center>
+            <center><h6 style="color:orange ;">2022 ‧ Action/Adventure ‧ 2h 41m </h6></center>
+            <center><p><b>Shows at:</b><br>
+            <li>
+            1:30  pm<br>
+            <li>
+            5:00  pm<br>
+            <li>
+            8:00  pm<br>
+            <li>
+            11:00 pm<br>
+            <li>
+            2:00  am<br><br>
 
-        </p></center>
-      </div>
-      <div class="columnn"><br>
-        <center><div class="zoom">
-          
-          <a href="Black Adam.html">
-            <center><img src="https://images.thedirect.com/media/photos/FcEv-62aQAADsg0-2.jpg" style="height: 200px;border: 2px solid yellow;"></center>
-          </a>
-        </div></center>
-          <center><h4><u> Black Adam</u></h4></center>
-        <center><h6 style="color:orange ;">2022 ‧ Action/Adventure ‧ 2h 5m</h6></center>
-        <center><p><b>Shows at:</b><br>
-          <li>
-          12:30  pm<br>
-          <li>
-          4:00  pm<br>
-          <li>
-          7:00  pm<br>
-          <li>
-          10:00 pm<br>
-          <li>
-          1:00  am<br>
+            </p></center>
+        </div>
+        <div class="columnn"><br>
+            <center><div class="zoom">
+            
+            <a href="Black Adam.html">
+                <center><img src="https://images.thedirect.com/media/photos/FcEv-62aQAADsg0-2.jpg" style="height: 200px;width: 160.79px;border: 2px solid yellow;"></center>
+            </a>
+            </div></center><br>
+            <center><h4><u> Black Adam</u></h4></center>
+            <center><h6 style="color:orange ;">2022 ‧ Action/Adventure ‧ 2h 5m</h6></center>
+            <center><p><b>Shows at:</b><br>
+            <li>
+            12:30  pm<br>
+            <li>
+            4:00  pm<br>
+            <li>
+            7:00  pm<br>
+            <li>
+            10:00 pm<br>
+            <li>
+            1:00  am<br><br>
 
-        </p></center>
-      </div>
-      <div class="columnn"><br>
-        <center><div class="zoom">
-          <a href="Free Guy.html">
-            <center><img src="https://i.redd.it/cxihlqsc6fg71.jpg" style="height: 200px;border: 2px solid yellow;;"></center>
-          </a>
-        </div></center>
-          <center><h4><u> Free Guy</u></h4></center>
-        <center><h6 style="color:orange ;">2021 ‧ Action/Sci-fi ‧ 1h 55m
-        </h6></center>
-        <center><p><b>Shows at:</b><br>
-          <li>
-            11:30  pm<br>
+            </p></center>
+        </div>
+        <div class="columnn"><br>
+            <center><div class="zoom">
+            <a href="Free Guy.html">
+                <center><img src="https://i.redd.it/cxihlqsc6fg71.jpg" style="height: 200px;width: 160.79px;border: 2px solid yellow;;"></center>
+            </a>
+            </div></center><br>
+            <center><h4><u> Free Guy</u></h4></center>
+            <center><h6 style="color:orange ;">2021 ‧ Action/Sci-fi ‧ 1h 55m
+            </h6></center>
+            <center><p><b>Shows at:</b><br>
+            <li>
+                11:30  pm<br>
+                <li>
+                3:00  pm<br>
+                <li>
+                6:00  pm<br>
+                <li>
+                9:00 pm<br>
+                <li>
+                12:00  am<br><br>
+            </li>
+
+            </p></center>
+        </div>
+        <div class="columnn"><br>
+            <center><div class="zoom">
+            
+            <a href="Spiderman.html">
+                <center><img src="https://w0.peakpx.com/wallpaper/392/737/HD-wallpaper-spider-man-no-way-home-poster.jpg" style="height: 200px;width: 160.79px;border: 2px solid yellow;;"></center>
+            </a>
+            
+            </div></center><br>
+            <center><h4><u> SpiderMan: No Way Home</u></h4></center>
+            <center><h6 style="color:orange ;">2019 ‧ Action/Adventure ‧ 2h 10m</h6></center>
+            <center><p><b>Shows at:</b><br>
+            <li>
+            12:30  pm<br>
             <li>
             3:00  pm<br>
             <li>
+            5:00  pm<br>
+            <li>
+            8:00 pm<br>
+            <li>
+            11:00  am<br><br>
+
+            </p></center>
+        </div>
+        <div class="columnn"><br>
+            <center><div class="zoom">
+            
+            <a href="No Time To Die.html">
+                <center><img src="https://w0.peakpx.com/wallpaper/411/735/HD-wallpaper-rami-malek-no-time-to-die-movie-poster.jpg" style="height: 200px;width: 160.79px;border: 2px solid yellow;;"></center>
+            </a>
+            </div></center><br>
+            <center><h4><u> No Time To Die</u></h4></center>
+            <center><h6 style="color:orange ;">2021 ‧ Action/Thriller ‧ 2h 43m </h6></center>
+            <center><p><b>Shows at:</b><br>
+            <li>
+            3:30  pm<br>
+            <li>
             6:00  pm<br>
             <li>
-            9:00 pm<br>
+            10:00  pm<br>
             <li>
-            12:00  am<br>
-          </li>
+            12:00 am<br>
+            <li>
+            3:00  am<br><br>
 
-        </p></center>
-      </div>
-      <div class="columnn"><br>
-        <center><div class="zoom">
-          
-          <a href="Spiderman.html">
-            <center><img src="https://w0.peakpx.com/wallpaper/392/737/HD-wallpaper-spider-man-no-way-home-poster.jpg" style="height: 200px;border: 2px solid yellow;;"></center>
-          </a>
-          
-        </div></center>
-          <center><h4><u> SpiderMan: No Way Home</u></h4></center>
-        <center><h6 style="color:orange ;">2019 ‧ Action/Adventure ‧ 2h 10m</h6></center>
-        <center><p><b>Shows at:</b><br>
-          <li>
-          12:30  pm<br>
-          <li>
-          3:00  pm<br>
-          <li>
-          5:00  pm<br>
-          <li>
-          8:00 pm<br>
-          <li>
-          11:00  am<br>
+            </p></center>
+        </div>
+        <div class="columnn"><br>
+            <center><div class="zoom">
+            
+            <a href="Dr.Strange.html">
+                <center><img src="https://pbs.twimg.com/media/FLhhanQaMAIGHlP?format=jpg&name=medium" style="height: 200px;width: 160.79px;border: 2px solid yellow;;"></center>
+            </a>
+            </div></center><br>
+            <center><h4><u> Dr.Strange: Multiverse Of Madness</u></h4></center>
+            <center><h6 style="color:orange ;">2022 ‧ Action/Adventure ‧ 2h 6m
+            </h6></center>
+            <center><p><b>Shows at:</b><br>
+            <li>
+            1:45  pm<br>
+            <li>
+            6:00  pm<br>
+            <li>
+            9:30  pm<br>
+            <li>
+            1:00 am<br>
+            <li>
+            3:00  am<br><br>
 
-        </p></center>
-      </div>
-      <div class="columnn"><br>
-        <center><div class="zoom">
-          
-          <a href="No Time To Die.html">
-            <center><img src="https://w0.peakpx.com/wallpaper/411/735/HD-wallpaper-rami-malek-no-time-to-die-movie-poster.jpg" style="height: 200px;border: 2px solid yellow;;"></center>
-          </a>
-        </div></center>
-          <center><h4><u> No Time To Die</u></h4></center>
-        <center><h6 style="color:orange ;">2021 ‧ Action/Thriller ‧ 2h 43m </h6></center>
-        <center><p><b>Shows at:</b><br>
-          <li>
-          3:30  pm<br>
-          <li>
-          6:00  pm<br>
-          <li>
-          10:00  pm<br>
-          <li>
-          12:00 am<br>
-          <li>
-          3:00  am<br>
-
-        </p></center>
-      </div>
-      <div class="columnn"><br>
-        <center><div class="zoom">
-          
-          <a href="Dr.Strange.html">
-            <center><img src="https://pbs.twimg.com/media/FLhhanQaMAIGHlP?format=jpg&name=medium" style="height: 200px;border: 2px solid yellow;;"></center>
-          </a>
-        </div></center>
-          <center><h4><u> Dr.Strange: Multiverse Of Madness</u></h4></center>
-          <center><h6 style="color:orange ;">2022 ‧ Action/Adventure ‧ 2h 6m
-          </h6></center>
-          <center><p><b>Shows at:</b><br>
-          <li>
-          1:45  pm<br>
-          <li>
-          6:00  pm<br>
-          <li>
-          9:30  pm<br>
-          <li>
-          1:00 am<br>
-          <li>
-          3:00  am<br>
-
-        </p></center>
-      </div>
+            </p></center>
+        </div>
+        </div>
     </div>
-  </div>
 </div>
 <br>
-<footer>
-  <div class="container" style="background-color: yellow;width: 100%;">
-    <div class="columnn"style="background-color: yellow; border-radius: 0 0 0 0 ">
-      <img src="logo n4.png">
+<p>&nbsp;</p>
+
+
+
+</body>
+<footer style="width: 100%;">
+    <div class="columnnn"style="background-color: yellow; border-radius: 0 0 0 0 ">
+      <img src="logo n4.png" style="height:30px ;width: 167px;">
       <p class="footer-text" style="font-size: 20px;">
         <b><i>"Experience the thrill of the silver screen from the comfort of your own home!"</b></i>
       </p>
     </div>
-    <div class="columnn" style="background-color: yellow; border-radius: 0px 0px 0px 0px;">
+    <div class="columnnn" style="background-color: yellow; border-radius: 0px 0px 0px 0px;">
 
       <div class="wrapper">
           <b>
@@ -383,13 +490,13 @@ h1{
           </li>
 
           <li>
-            <a href="#" class="footer-link">Contact Us</a>
+            <a href="Contact us.html" class="footer-link">Contact Us</a>
           </li>
 
         </ul></b>
       </div>
     </div>
-    <div class="columnn"style="background-color: yellow;border-radius:0 0 0 0">
+    <div class="columnnn"style="background-color: yellow;border-radius:0 0 0 0">
       <b><p class="footer-title">Legal Stuff</p>
         
         <ul>
@@ -409,42 +516,10 @@ h1{
         </ul></b>
 
       </div>
-    </div>
-    <center><p class="copyright" style="color: yellow;">
-      &copy; Copyright 2022 <a href="index.html">Movieszz</a>
-    </p></center>
-  </div>
+      <p>&nbsp;</p>
+      <center><p class="copyright" style="color: yellow;">
+        &copy; Copyright 2022 <a href="index.html">Movieszz</a>
+      </p></center>
 </footer>
 
-<script>
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function currentDiv(n) {
-  showDivs(slideIndex = n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" w3-white", "");
-  }
-  x[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " w3-white";
-}
-</script>
-
-
-</body>
 </html> 
