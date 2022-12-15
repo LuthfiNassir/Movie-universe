@@ -2,10 +2,12 @@
 <html>
 <title>Booking Managment</title>
 <meta name="viewport" content="width=1366px, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="icon" href="TINY LOGO.png" >
 <style>
-  
+  *{
+    padding:0%;
+    margin:0%;
+  }
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -84,7 +86,7 @@ body {
             left: 50%;
             height: 349.67px;
             width: 699.33px;
-            background: red;
+            background: rgb(0, 0, 0);
             transform: translate(-50%,-50%);
             overflow: hidden;
             
@@ -148,11 +150,12 @@ body {
 
 /* Create two unequal columns that floats next to each other */
 .column {
+  margin-left:0px;
   float: left;
   padding: 10px;
   height: 300px; /* Should be removed. Only for demonstration */
   border-radius: 0 30px 30px 0 ;
-  top: 1000px;
+ top: 400px;
 }
 
 .left {
@@ -160,14 +163,14 @@ body {
   background-color: yellow;
   position: relative;
   height: auto;
- top: 360px;
+}
+.right{
+  width: 70%;
+  position:relative;
+  height: auto;
+  margin-right: 0px;
 }
 
-.right {
-  width: 80%;
-  position: relative;
-  top: 360px;
-}
 
 /* Clear floats after the columns */
 .row:after {
@@ -176,16 +179,17 @@ body {
   clear: both;
 }
 .columnn {
+  padding-left: 30px;
+  padding-right: 30px;
   float: right;
-  width: 33.33%;
+  width: 25.66%;
   border: 3px solid yellow;
   border-radius: 15px 15px 15px 15px;
   box-shadow: 5px 3px 3px yellow;
 }
-.row:after {
+.rows:after {
   content: "";
   display: table;
-  clear: both;
 }
 .columnnn {
   float: left;
@@ -316,7 +320,7 @@ footer {
     <div class="column right" style="background-color:rgb(0, 0, 0);
     color: rgb(255, 255, 30);">
         
-        <div class="row">
+        <div class="rows">
         <div class="columnn"><br>
             <center><div class="zoom">
             
@@ -453,13 +457,12 @@ footer {
             9:30  pm<br>
             <li>
             1:00 am<br>
-            <li>
-            3:00  am<br><br>
+           <br>
 
             </p></center>
         </div>
         </div>
-    </div>
+  </div>
 </div>
 <br>
 <p>&nbsp;</p>
@@ -517,6 +520,7 @@ footer {
         </ul></b>
 
       </div>
+      <p>&nbsp;</p>
       <p>&nbsp;</p>
       <center><p class="copyright" style="color: yellow;">
         &copy; Copyright 2022 <a href="index.html">Movieszz</a>
