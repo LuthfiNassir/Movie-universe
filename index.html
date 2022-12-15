@@ -14,6 +14,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  margin-right: 0px;
 }
 
 .topnav {
@@ -151,6 +152,7 @@ body {
 /* Create two unequal columns that floats next to each other */
 .column {
   margin-left:0px;
+  margin-right: 0px;
   float: left;
   padding: 10px;
   height: 300px; /* Should be removed. Only for demonstration */
@@ -159,16 +161,18 @@ body {
 }
 
 .left {
-  width: 20%;
+  width: 18%;
   background-color: yellow;
   position: relative;
   height: auto;
+  box-shadow: 5px 3px 3px rgb(247, 159, 37);
 }
 .right{
+  float: right;
   width: 70%;
   position:relative;
   height: auto;
-  margin-right: 0px;
+  margin-right: 60px;
 }
 
 
@@ -177,10 +181,12 @@ body {
   content: "";
   display: table;
   clear: both;
+  margin-right: 400px;
 }
 .columnn {
   padding-left: 30px;
   padding-right: 30px;
+  margin-right: 0px;
   float: right;
   width: 25.66%;
   border: 3px solid yellow;
@@ -288,13 +294,16 @@ footer {
     <div class="column left" style="background-color:yellow;"><br>
         <h2><B><u><CENTER>BOOK NOW!</CENTER></u></B></h2><br>
         <center><input type="search" placeholder="Search your movie :)" style="width:auto"></center>
-        <h4>   </h4>
+        <h6>&nbsp;</h6>
         <center><input type="date" style="width: auto;"></center>
-        <h4>  </h4>
+        <h6> &nbsp; </h6>
         <center><input type="time" style="width: auto;"></center>
+        <h6>&nbsp;</h6>
         <center><p><input type="checkbox">&nbsp; I have read the <b>*T&C</b></p></center>
+        <h6>&nbsp;</h6>
         <center><input type="button" value="Pay Now" style="color:red ;"</center>
-        <h6 style="color: grey; font-size: small;">**In order to purchase a ticket and use our service, you must agree to the following terms and conditions:<br>
+        <h6>&nbsp;</h6>
+        <h6 style="color: grey; font-size: 13px;">**In order to purchase a ticket and use our service, you must agree to the following terms and conditions:<br>
             <li>
             You must be at least 18 years of age to purchase a ticket and use our service.<br>
             <li>
