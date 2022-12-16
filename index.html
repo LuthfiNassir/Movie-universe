@@ -108,6 +108,11 @@ body {
         .navigator .bar:hover{
             background: yellow;
         }
+        .wrapper{
+            width: 100%;
+            display: flex;
+            animation: slide 16s infinite;
+        }
         input[type="radio"]{
             position: absolute;
             visibility: hidden;
@@ -177,7 +182,7 @@ body {
   width: 29%;
   border: 3px solid yellow;
   border-radius: 15px 15px 15px 15px;
-  box-shadow: 5px 3px 3px yellow;
+  box-shadow: 10px 8px 8px rgb(93, 92, 92), 0 0 25px rgb(81, 79, 79), 0 0 5px rgb(133, 133, 165);
   background-color: #303839;
 }
 .rows:after {
@@ -225,7 +230,7 @@ input[type=text], select, textarea {
   border: 1px solid #ccc;
   border-radius: 5px 5px 5px 5px;
   margin-top: 6px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   resize: vertical;
 }
 input[type=date], select, textarea {
@@ -234,7 +239,7 @@ input[type=date], select, textarea {
   border: 1px solid #ccc;
   border-radius: 5px 5px 5px 5px;
   margin-top: 6px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   cursor: pointer;
 }
 input[type=time], select, textarea {
