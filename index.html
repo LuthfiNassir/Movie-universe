@@ -59,8 +59,6 @@ body {
   float:right ;
   
 }
-
-/* Responsive navigation menu (for mobile devices) */
 @media screen and (max-width: 600px) {
   .topnav a, .topnav-right {
     float: none;
@@ -142,18 +140,12 @@ body {
         #btn5:checked ~ .first{
             margin-left: -80%;
         }
-   
-{
-  box-sizing: border-box;
-}
-
-/* Create two unequal columns that floats next to each other */
 .column {
   margin-left:0px;
   margin-right: 0px;
   float: left;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  height: 300px; 
   border-radius: 0 30px 30px 0 ;
  top: 390px;
 }
@@ -171,9 +163,6 @@ body {
   position:relative;
   height: auto;
 }
-
-
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
@@ -204,14 +193,14 @@ body {
 .zoom {
   padding: 10px;
  
-  transition: transform .2s; /* Animation */
+  transition: transform .2s;
   width: 200px;
   height: 200px;
   margin: 0 auto;
 }
 
 .zoom:hover {
-  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(1.1); 
 }
 h1{
     color:  yellow;
@@ -246,7 +235,6 @@ input[type=date], select, textarea {
   border-radius: 5px 5px 5px 5px;
   margin-top: 6px;
   margin-bottom: 16px;
-  resize: vertical;
   cursor: pointer;
 }
 input[type=time], select, textarea {
@@ -256,7 +244,6 @@ input[type=time], select, textarea {
   border-radius: 5px 5px 5px 5px;
   margin-top: 6px;
   margin-bottom: 16px;
-  resize: vertical;
   cursor: pointer;
 }
 input[type=button], select, textarea {
@@ -266,7 +253,6 @@ input[type=button], select, textarea {
   border-radius: 15px 15px 15px 15px;
   margin-top: 6px;
   margin-bottom: 5px;
-  resize: vertical;
   cursor: pointer;
 }
 </style>
