@@ -5,20 +5,16 @@
 <meta name="viewport" content="width=1366px, initial-scale=1">
   
   <link rel="icon" href="TINY LOGO.png" >
-<!-- Add font awesome icons -->
-
 <style>
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 .topnav {
   position: relative;
   overflow: hidden;
   background-color: rgb(255, 251, 13);
 }
-
 .topnav a {
   float: left;
   color: #000000;
@@ -27,7 +23,6 @@ body {
   text-decoration: none;
   font-size: 17px;
 }
-
 .topnav a.active {
   background-color: hsl(28, 100%, 58%);
   color: rgb(0, 0, 0);
@@ -36,7 +31,6 @@ body {
   background-color: hsl(0, 0%, 3%);
   color: yellow;
 }
-
 .topnav-centered a {
   float: none;
   position: absolute;
@@ -53,7 +47,6 @@ body {
   background-color: orange;
   color: yellow;
 }
-
 .topnav-right-Contactus  {
   float: right;
   background-color:orange;
@@ -64,32 +57,13 @@ body {
   background-color:orange;
   color: black;
 }
-
-/* Responsive navigation menu (for mobile devices) */
-@media screen and (max-width: 600px) {
-  .topnav a, .topnav-right {
-    float: none;
-    display: block;
-  }
-  
-  .topnav-centered a {
-    position: relative;
-    top: 0;
-    left: 0;
-    transform: none;
-  }
-}
-
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: black;
 }
-
 * {
   box-sizing: border-box;
 }
-
-/* Style inputs */
 input[type=text], select, textarea {
   width: 100%;
   padding: 12px;
@@ -106,7 +80,6 @@ input[type=email], select, textarea {
   margin-bottom: 16px;
   resize: vertical;
 }
-
 input[type=submit] {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
@@ -115,12 +88,9 @@ input[type=submit] {
   border-radius: 50px;
   cursor: pointer;
 }
-
 input[type=submit]:hover {
   background-color: #eba235;
 }
-
-/* Style the container/contact section */
 .container {
   border-radius: 5px;
   background-color: #f2f2f2;
@@ -128,29 +98,16 @@ input[type=submit]:hover {
   padding-top: 30px;
   align-self: center;
 }
-
-/* Create two columns that float next to eachother */
 .column {
   float: left;
   width: 50%;
   margin-top: 6px;
   padding: 20px;
 }
-
-/* Clear floats after the columns */
 .row:after {
   content: "";
   display: table;
   clear: both;
-}
-
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
 }
 .row:after {
   content: "";
@@ -178,7 +135,6 @@ footer {
 .columnnn {
   float: left;
   width: 33.33%;
- 
 }
 </style>
 </head>
@@ -190,17 +146,14 @@ footer {
           <a href="index.html" class="active">Home</a>
         </div>
         
-        
         <img src="logo n4.png" >
+
         <div class="topnav-right-About" > 
-          <a href="#about">About</a>
+          <a href="About us.html">About</a>
           
         </div> 
         <div class="topnav-right-Contactus" >
-          <a href="Contact us.html">Contact Us</a></div>
-          
-        
-        
+          <a href="Contact us.html">Contact Us</a></div> 
       </div>
     <div class="container" style="background-color: #000000;">
         <div style="text-align:center">
@@ -241,8 +194,7 @@ footer {
                 <label for="subject">Subject</label>
                 <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
               </form>
-                <center><a href="Thanks contact us.html"><input type="submit" value="Submit"></center></a>
-                
+                <center><a href="Thanks contact us.html"><input type="submit" value="Submit"></center></a>              
             </div>
             </div>
                 <h4 style="color: rgb(0, 0, 0);"><center>We hope you've had a pleasant experience using our movie booking website. If you have any questions, comments, or feedback, please feel free to contact us using the form below.<br>
@@ -270,21 +222,16 @@ footer {
       <div class="wrapper">
           <b>
         <p class="footer-title">Quick Links</p>
-  
-        <ul>
-  
+        <ul> 
           <li>
             <a href="#" class="footer-link">Watch with us</a>
           </li>
-  
           <li>
-            <a href="#" class="footer-link">About Us</a>
+            <a href="About us.html" class="footer-link">About Us</a>
           </li>
-  
           <li>
             <a href="Contact us.html" class="footer-link">Contact Us</a>
           </li>
-  
         </ul></b>
       </div>
     </div>
@@ -306,9 +253,7 @@ footer {
           </li>
   
         </ul></b>
-  
       </div>
-  
       <center><p class="copyright" style="color: yellow;">
         &copy; Copyright 2022 <a href="index.html">Movieszz</a>
       </p></center>
